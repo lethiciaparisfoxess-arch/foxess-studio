@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>FoxESS Studio</title>
+
+
+<link rel="stylesheet" href="css/base.css">
+
+<link rel="stylesheet" href="css/componentes.css">
+
+<link
+    rel="stylesheet"
+    href="css/aplicacoes/backup-residencial.css"
+>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- ================= INICIO ================= -->
+
+
+<div class="container" id="telaInicio">
+
+
+<div class="card">
+
+
+<h1>
+FoxESS Studio
+</h1>
+
+
+<p>
+Dimensionamento inteligente de sistemas híbridos
+</p>
+
+<label>Nome *</label>
+<input
+    id="leadNome"
+    type="text"
+    placeholder="Seu nome">
+
+<label>Empresa *</label>
+<input
+    id="leadEmpresa"
+    type="text"
+    placeholder="Empresa">
+
+<label>E-mail *</label>
+<input
+    id="leadEmail"
+    type="email"
+    placeholder="email@empresa.com">
+
+<label>Telefone *</label>
+<input
+    id="leadTelefone"
+    type="tel"
+    placeholder="(11) 99999-9999">
+
+<label>
+Como conheceu a calculadora?
+</label>
+
+<select id="leadOrigem">
+
+    <option value="">
+        Selecione
+    </option>
+
+    <option>
+        FoxESS
+    </option>
+
+    <option>
+        Distribuidor
+    </option>
+
+</select>
+
+<button onclick="iniciarProjeto()">
+
+Iniciar projeto
+
+</button>
+
+
+
+<div class="aviso">
+
+<p>
+
+<strong>Atenção:</strong><br><br>
+
+Ressaltamos que os resultados gerados são apenas estimativas e não substituem um projeto técnico profissional. A Fox ESS não se responsabiliza por eventuais inadequações decorrentes do uso desta ferramenta. Para garantir que o sistema atenda plenamente às suas demandas, é indispensável a análise de um engenheiro ou especialista qualificado.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<!-- ================= CLIENTE ================= -->
+
+
+
+<div class="container escondido" id="telaCliente">
+
+
+<div class="card">
+
+
+<button class="voltar" onclick="voltarInicio()">
+
+←
+
+</button>
+
+
+<h1>
+Novo projeto
+</h1>
+
+
+
+<p>
+Selecione o tipo de cliente
+</p>
+
+
+
+<button onclick="abrirResidencial()">
+Residencial
+</button>
+
+
+<button onclick="abrirCI()">
+    C&I
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= APLICAÇÃO ================= -->
+
+
+<div class="container escondido" id="telaAplicacao">
+
+
+<div class="card">
+
+
+<button class="voltar" onclick="voltarCliente()">
+
+←
+
+</button>
+
+
+<h1>
+Residencial
+</h1>
+
+
+<p>
+Selecione as aplicações desejadas
+</p>
+
+
+
+
+<div class="selecoes">
+
+
+
+<label class="opcao-card">
+
+
+<input 
+type="checkbox"
+id="backupCheck">
+
+
+Backup
+
+
+</label>
+
+
+
+</div>
+
+
+
+<button onclick="continuarAplicacao()">
+
+Continuar
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= BACKUP ================= -->
+
+
+
+<div class="container escondido" id="telaBackup">
+
+
+
+<div class="dashboard-backup">
+
+
+
+
+
+<!-- ESQUERDA -->
+
+
+<div class="painel-entrada">
+
+
+
+<button class="voltar" onclick="voltarAplicacao()">
+
+←
+
+</button>
+
+
+
+<h1>
+Backup
+</h1>
+
+
+<p>
+Preencha os dados do sistema
+</p>
+
+
+
+
+<label>
+
+Autonomia (horas)
+
+</label>
+
+
+<input 
+id="autonomia"
+type="number"
+step="0.01"
+placeholder="Ex: 2.5">
+
+
+
+
+
+<label>
+
+Padrão de entrada
+
+</label>
+
+
+
+<select id="padraoEntrada">
+
+
+<option>
+Monofásico 220V
+</option>
+
+<option>
+Bifásico 127V/220V
+</option>
+
+
+<option>
+Trifásico 127V/220V
+</option>
+
+
+<option>
+Trifásico 220V/380V
+</option>
+
+
+</select>
+
+<div id="grupoCargaTrifasica" style="display:none; margin-top:15px;">
+
+    <label>
+
+        Existem cargas trifásicas?
+
+    </label>
+
+    <select id="possuiCargaTrifasica">
+
+        <option value="nao" selected>
+            Não
+        </option>
+
+        <option value="sim">
+            Sim
+        </option>
+
+    </select>
+
+</div>
+
+
+<label>
+
+Tipo de solução
+
+</label>
+
+
+<div class="selecoes selecoes-linha">
+
+
+<label class="opcao-card opcao-card-pequena">
+
+<input
+type="radio"
+name="tipoSolucao"
+id="tipoInversor"
+value="inversor"
+checked>
+
+Inversor + Bateria
+
+</label>
+
+
+<label class="opcao-card opcao-card-pequena">
+
+<input
+type="radio"
+name="tipoSolucao"
+id="tipoAIO"
+value="aio">
+
+All in One
+
+</label>
+
+
+</div>
+
+
+
+
+
+<h2>
+
+Cargas
+
+</h2>
+
+
+
+
+
+<div class="tabela-container">
+
+
+<table id="tabelaCargas">
+
+
+<thead>
+
+<tr>
+
+<th>Aparelho</th>
+
+<th>Potência [W]</th>
+
+<th>Tensão [V]</th>
+
+<th>Quantidade</th>
+
+<th>Tempo ligado [h]</th>
+
+<th>FP</th>
+
+<th>Ip/In</th>
+<th>Ação</th>
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody>
+
+
+<tr>
+
+
+<td>
+<input type="text">
+</td>
+
+
+
+<td>
+<input type="number">
+</td>
+
+
+
+<td>
+
+<select>
+
+<option>127</option>
+
+<option>220</option>
+
+<option>380</option>
+
+</select>
+
+</td>
+
+
+
+<td>
+<input type="number" value="1">
+</td>
+
+
+
+<td>
+<input type="number">
+</td>
+
+
+
+<td>
+<input type="number" step="0.01">
+</td>
+
+
+
+<td>
+<input type="number">
+</td>
+
+
+
+<td>
+
+<button 
+class="btn-excluir"
+onclick="excluirCarga(this)">
+
+🗑️
+
+</button>
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+<button onclick="adicionarCarga()">
+
++ Adicionar carga
+
+</button>
+
+
+
+
+<button onclick="calcularBackup()">
+
+Calcular sistema
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- DIREITA -->
+
+
+<div class="painel-resultado">
+
+
+<h2>
+
+Resultado do dimensionamento
+
+</h2>
+
+
+<div id="resultadoSistema">
+
+
+<p>
+
+Aguardando cálculo...
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+<!-- ================= APLICAÇÃO C&I ================= -->
+
+<div class="container escondido" id="telaAplicacaoCI">
+
+    <div class="card">
+
+        <button class="voltar" onclick="voltarCliente()">
+
+            ←
+
+        </button>
+
+        <h1>
+            C&I
+        </h1>
+
+        <p>
+            Selecione a aplicação
+        </p>
+
+        <button onclick="abrirBackupCI()">
+
+            Backup
+
+        </button>
+
+    </div>
+
+</div>
+
+<div class="container escondido" id="telaBackupCI">
+
+
+
+<div class="dashboard-backup">
+
+
+
+
+
+<!-- ESQUERDA -->
+
+
+<div class="painel-entrada">
+
+
+
+<button class="voltar" onclick="voltarAplicacaoCI()">
+
+←
+
+</button>
+
+
+
+<h1>
+Backup
+</h1>
+
+
+<p>
+Preencha os dados do sistema
+</p>
+
+
+
+
+<label>
+
+Autonomia (horas)
+
+</label>
+
+
+<input 
+id="autonomiaCI"
+type="number"
+step="0.01"
+placeholder="Ex: 2.5">
+
+
+
+
+
+<label>
+
+Padrão de entrada
+
+</label>
+
+
+
+<select id="padraoEntradaCI">
+
+
+<option>
+Monofásico 220V
+</option>
+
+<option>
+Bifásico 127V/220V
+</option>
+
+
+<option>
+Trifásico 127V/220V
+</option>
+
+
+<option>
+Trifásico 220V/380V
+</option>
+
+
+</select>
+
+<div id="grupoCargaTrifasicaCI" style="display:none; margin-top:15px;">
+
+    <label>
+
+        Existem cargas trifásicas?
+
+    </label>
+
+    <select id="possuiCargaTrifasicaCI">
+
+        <option value="nao" selected>
+            Não
+        </option>
+
+        <option value="sim">
+            Sim
+        </option>
+
+    </select>
+
+</div>
+
+
+<label>
+
+Tipo de solução
+
+</label>
+
+
+<div class="selecoes selecoes-linha">
+
+
+<label class="opcao-card opcao-card-pequena">
+
+<input
+type="radio"
+name="tipoSolucaoCI"
+id="tipoInversorCI"
+value="inversor"
+checked>
+
+Inversor + Bateria
+
+</label>
+
+
+<label class="opcao-card opcao-card-pequena">
+
+<input
+type="radio"
+name="tipoSolucaoCI"
+id="tipoAIOCI"
+value="aio">
+
+All in One
+
+</label>
+
+
+</div>
+
+
+
+
+
+<h2>
+
+Cargas
+
+</h2>
+
+
+
+
+
+<div class="tabela-container">
+
+
+<table id="tabelaCargasCI">
+
+
+<thead>
+
+<tr>
+
+<th>Aparelho</th>
+
+<th>Potência [W]</th>
+
+<th>Tensão [V]</th>
+
+<th>Quantidade</th>
+
+<th>Tempo ligado [h]</th>
+
+<th>FP</th>
+
+<th>Ip/In</th>
+<th>Ação</th>
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody>
+
+
+<tr>
+
+
+<td>
+<input type="text">
+</td>
+
+
+
+<td>
+<input type="number">
+</td>
+
+
+
+<td>
+
+<select>
+
+<option>127</option>
+
+<option>220</option>
+
+<option>380</option>
+
+</select>
+
+</td>
+
+
+
+<td>
+<input type="number" value="1">
+</td>
+
+
+
+<td>
+<input type="number">
+</td>
+
+
+
+<td>
+<input type="number" step="0.01">
+</td>
+
+
+
+<td>
+<input type="number">
+</td>
+
+
+
+<td>
+
+<button 
+class="btn-excluir"
+onclick="excluirCarga(this)">
+
+🗑️
+
+</button>
+
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+<button onclick="adicionarCarga()">
+
++ Adicionar carga
+
+</button>
+
+
+
+
+<button onclick="calcularBackupCI()">
+
+Calcular sistema
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- DIREITA -->
+
+
+<div class="painel-resultado">
+
+
+<h2>
+
+Resultado do dimensionamento
+
+</h2>
+
+
+<div id="resultadoSistemaCI">
+
+
+<p>
+
+Aguardando cálculo...
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+<script type="module" src="js/app.js"></script>
+
+
+</body>
+
+
+</html>

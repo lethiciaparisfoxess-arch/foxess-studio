@@ -1,0 +1,304 @@
+/* =====================================================
+   FOXESS STUDIO
+   Aplicação: Backup Residencial
+===================================================== */
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard-backup {
+    display: flex;
+    align-items: flex-start;
+
+    width: 95vw;
+    max-width: 1500px;
+
+    gap: 28px;
+}
+
+
+/* =====================================================
+   PAINEL DE ENTRADA
+===================================================== */
+
+.painel-entrada {
+    width: 70%;
+    height: 84vh;
+
+    padding: 32px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.13);
+}
+
+.painel-entrada > label {
+    margin-top: 17px;
+}
+
+.painel-entrada h1 {
+    margin-bottom: 8px;
+}
+
+.painel-entrada h2 {
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   PAINEL DE RESULTADO
+===================================================== */
+
+.painel-resultado {
+    width: 30%;
+    min-height: 500px;
+    max-height: 84vh;
+
+    padding: 24px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #f5f3ff;
+
+    border: 1px solid rgba(221, 214, 254, 0.8);
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.painel-resultado > h2 {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-size: 21px;
+}
+
+#resultadoSistema {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#resultadoSistema h3 {
+    margin: 6px 0;
+
+    font-size: 18px;
+}
+
+#resultadoSistema p {
+    margin: 4px 0;
+
+    font-size: 13px;
+}
+
+#resultadoSistema hr {
+    width: 100%;
+
+    margin: 14px 0;
+
+    border: none;
+    border-top: 1px solid #ddd6fe;
+}
+
+
+/* =====================================================
+   TABELA DE CARGAS
+===================================================== */
+
+.tabela-container {
+    width: 100%;
+
+    margin-top: 15px;
+
+    overflow-x: auto;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+#tabelaCargas {
+    width: 100%;
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+#tabelaCargas thead {
+    position: sticky;
+    top: 0;
+
+    z-index: 2;
+}
+
+#tabelaCargas th {
+    padding: 12px 9px;
+
+    background: #f5f3ff;
+
+    border-bottom: 1px solid #ddd6fe;
+
+    color: #7c3aed;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+    white-space: nowrap;
+}
+
+#tabelaCargas td {
+    padding: 7px;
+
+    border-bottom: 1px solid #f3f4f6;
+
+    vertical-align: middle;
+}
+
+#tabelaCargas tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#tabelaCargas tbody tr:hover {
+    background: #fafafa;
+}
+
+#tabelaCargas input,
+#tabelaCargas select {
+    min-width: 70px;
+    height: 40px;
+
+    padding: 8px;
+
+    font-size: 12px;
+}
+
+#tabelaCargas td:first-child input {
+    min-width: 150px;
+}
+
+#tabelaCargas td:last-child {
+    width: 55px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   BARRA DE ROLAGEM
+===================================================== */
+
+.painel-entrada::-webkit-scrollbar,
+.painel-resultado::-webkit-scrollbar,
+.tabela-container::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+.painel-entrada::-webkit-scrollbar-thumb,
+.painel-resultado::-webkit-scrollbar-thumb,
+.tabela-container::-webkit-scrollbar-thumb {
+    background: #c4b5fd;
+
+    border-radius: 20px;
+}
+
+.painel-entrada::-webkit-scrollbar-track,
+.painel-resultado::-webkit-scrollbar-track,
+.tabela-container::-webkit-scrollbar-track {
+    background: #f5f3ff;
+
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .dashboard-backup {
+        width: 98vw;
+
+        gap: 18px;
+    }
+
+    .painel-entrada {
+        width: 65%;
+    }
+
+    .painel-resultado {
+        width: 35%;
+    }
+
+    .produto-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto-info {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .dashboard-backup {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .painel-entrada,
+    .painel-resultado {
+        width: 100%;
+        height: auto;
+        max-height: none;
+
+        padding: 23px;
+    }
+
+    .tabela-container {
+        overflow-x: auto;
+    }
+
+    #tabelaCargas {
+        min-width: 800px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .painel-entrada,
+    .painel-resultado {
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    #tabelaCargas {
+        min-width: 760px;
+    }
+
+}

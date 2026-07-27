@@ -1,0 +1,570 @@
+{
+
+  "inversores": [
+
+    {
+      "modelo": "H1-5.0-E-G2",
+      "tipo": "inversor",
+      "max_power_eps": 5000,
+      "rated_voltage": "220",
+      "peak_power_60s": 5500,
+      "picture": "assets/produtos/H1-G2-3~6KW.png",
+      "max_parallel_units": 4,
+      "parallel_accessory_model": null,
+      "efficiency": 97.0,
+      "battery_max_current": 50,
+      "battery_input": 1,
+      "max_array_power": 10000,
+      "recommended_pv_power": 10000,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 550,
+      "max_pv_current": 16,
+      "pv_isc": 20,
+      "mppts": 2,
+      "input_per_mppt": 1,
+      "fase": "monofasico"
+    },
+
+
+    {
+      "modelo": "KH7.5",
+      "tipo": "inversor",
+      "max_power_eps": 7500,
+      "rated_voltage": "220",
+      "peak_power_60s": 10000,
+      "picture": "assets/produtos/KH-7.5~10.5.png",
+      "max_parallel_units": 4,
+      "parallel_accessory_model": null,
+      "efficiency": 97.2,
+      "battery_max_current": 50,
+      "battery_input": 1,
+      "max_array_power": 16000,
+      "recommended_pv_power": 12000,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 500,
+      "max_pv_current": 16,
+      "pv_isc": 20,
+      "mppts": 3,
+      "input_per_mppt": 1,
+      "fase": "monofasico"
+    },
+
+
+    {
+      "modelo": "KH10.5",
+      "tipo": "inversor",
+      "max_power_eps": 10500,
+      "rated_voltage": "220",
+      "peak_power_60s": 15000,
+      "picture": "assets/produtos/KH-7.5~10.5.png",
+      "max_parallel_units": 4,
+      "parallel_accessory_model": null,
+      "efficiency": 97.2,
+      "battery_max_current": 50,
+      "battery_input": 1,
+      "max_array_power": 21000,
+      "recommended_pv_power": 15000,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 500,
+      "max_pv_current": 16,
+      "pv_isc": 20,
+      "mppts": 4,
+      "input_per_mppt": 1,
+      "fase": "monofasico"
+    },
+
+
+    {
+      "modelo": "H1-5.7-US",
+      "tipo": "inversor",
+      "max_power_eps": 5700,
+      "rated_voltage": "127/220",
+      "peak_power_60s": 7695,
+      "picture": "assets/produtos/H1-US.png",
+      "max_parallel_units": 4,
+      "parallel_accessory_model": "Fox Hub G2",
+      "efficiency": 97.0,
+      "battery_max_current": 50,
+      "battery_input": 1,
+      "max_array_power": 11400,
+      "recommended_pv_power": 11400,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 550,
+      "max_pv_current": 14,
+      "pv_isc": 28,
+      "mppts": 3,
+      "input_per_mppt": 1,
+      "fase": "bifasico"
+    },
+
+
+    {
+      "modelo": "H1-7.5-US",
+      "tipo": "inversor",
+      "max_power_eps": 7500,
+      "rated_voltage": "127/220",
+      "peak_power_60s": 10125,
+      "picture": "assets/produtos/H1-US.png",
+      "max_parallel_units": 4,
+      "parallel_accessory_model": "Fox Hub G2",
+      "efficiency": 97.0,
+      "battery_max_current": 50,
+      "battery_input": 1,
+      "max_array_power": 15000,
+      "recommended_pv_power": 15000,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 550,
+      "max_pv_current": 14,
+      "pv_isc": 28,
+      "mppts": 3,
+      "input_per_mppt": 1,
+      "fase": "bifasico"
+    },
+
+
+    {
+      "modelo": "H1-11.4-US",
+      "tipo": "inversor",
+      "max_power_eps": 11400,
+      "rated_voltage": "127/220",
+      "peak_power_60s": 15389,
+      "picture": "assets/produtos/H1-US.png",
+      "max_parallel_units": 4,
+      "parallel_accessory_model": "Fox Hub G2",
+      "efficiency": 97.0,
+      "battery_max_current": 50,
+      "battery_input": 1,
+      "max_array_power": 22800,
+      "recommended_pv_power": 22800,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 550,
+      "max_pv_current": 14,
+      "pv_isc": 28,
+      "mppts": 3,
+      "input_per_mppt": 1,
+      "fase": "bifasico"
+    },
+
+
+    {
+      "modelo": "H3-PRO-11.5",
+      "tipo": "inversor",
+      "max_power_eps": 11500,
+      "rated_voltage": "T220",
+      "peak_power_60s": 12600,
+      "picture": "assets/produtos/H3 PRO-03.png",
+      "max_parallel_units": 10,
+      "parallel_accessory_model": "AI Link",
+      "efficiency": 97.3,
+      "battery_max_current": 50,
+      "battery_input": 2,
+      "max_array_power": 22000,
+      "recommended_pv_power": 16500,
+      "max_pv_voltage": 1000,
+      "min_mppt_voltage": 150,
+      "max_mppt_voltage": 850,
+      "max_pv_current": 16,
+      "pv_isc": 20,
+      "mppts": 3,
+      "input_per_mppt": 2,
+      "fase": "trifasico"
+    },
+
+
+    {
+      "modelo": "H3-PRO-20.0",
+      "tipo": "inversor",
+      "max_power_eps": 20000,
+      "rated_voltage": "T380",
+      "peak_power_60s": 24000,
+      "picture": "assets/produtos/H3 PRO-03.png",
+      "max_parallel_units": 10,
+      "parallel_accessory_model": "AI Link",
+      "efficiency": 97.3,
+      "battery_max_current": 50,
+      "battery_input": 2,
+      "max_array_power": 40000,
+      "recommended_pv_power": 30000,
+      "max_pv_voltage": 1000,
+      "min_mppt_voltage": 150,
+      "max_mppt_voltage": 850,
+      "max_pv_current": 16,
+      "pv_isc": 20,
+      "mppts": 3,
+      "input_per_mppt": 2,
+      "fase": "trifasico"
+    },
+
+
+    {
+      "modelo": "H3-PRO-17.3",
+      "tipo": "inversor",
+      "max_power_eps": 17300,
+      "rated_voltage": "T220",
+      "peak_power_60s": 19000,
+      "picture": "assets/produtos/H3 PRO-03.png",
+      "max_parallel_units": 10,
+      "parallel_accessory_model": "AI Link",
+      "efficiency": 97.3,
+      "battery_max_current": 50,
+      "battery_input": 2,
+      "max_array_power": 34000,
+      "recommended_pv_power": 25500,
+      "max_pv_voltage": 1000,
+      "min_mppt_voltage": 150,
+      "max_mppt_voltage": 850,
+      "max_pv_current": 16,
+      "pv_isc": 20,
+      "mppts": 3,
+      "input_per_mppt": 2,
+      "fase": "trifasico"
+    },
+
+
+    {
+      "modelo": "H3-PRO-30.0",
+      "tipo": "inversor",
+      "max_power_eps": 30000,
+      "rated_voltage": "T380",
+      "peak_power_60s": 36000,
+      "picture": "assets/produtos/H3 PRO-03.png",
+      "max_parallel_units": 10,
+      "parallel_accessory_model": "AI Link",
+      "efficiency": 97.3,
+      "battery_max_current": 50,
+      "battery_input": 2,
+      "max_array_power": 60000,
+      "recommended_pv_power": 45000,
+      "max_pv_voltage": 1000,
+      "min_mppt_voltage": 150,
+      "max_mppt_voltage": 850,
+      "max_pv_current": 16,
+      "pv_isc": 20,
+      "mppts": 3,
+      "input_per_mppt": 2,
+      "fase": "trifasico"
+    },
+
+    {
+      "modelo": "H3-50-Plus",
+      "tipo": "inversor",
+      "max_power_eps": 55000,
+      "rated_voltage": "T380",
+      "peak_power_60s": 155000,
+      "picture": "assets/produtos/H3-Plus.png",
+      "efficiency": 98.5,
+      "battery_max_current": 80,
+      "battery_input": 3,
+      "battery_families": ["CQ6", "CQ16"],
+      "max_array_power": 100000,
+      "recommended_pv_power": 50000,
+      "max_pv_voltage": 1000,
+      "min_mppt_voltage": 180,
+      "max_mppt_voltage": 950,
+      "max_pv_current": 20,
+      "pv_isc": 22.5,
+      "mppts": 4,
+      "input_per_mppt": 2,
+      "fase": "trifasico"
+    },
+
+    {
+      "modelo": "H3-75-Plus",
+      "tipo": "inversor",
+      "max_power_eps": 82500,
+      "rated_voltage": "T380",
+      "peak_power_60s": 155000,
+      "picture": "assets/produtos/H3-Plus.png",
+      "efficiency": 98.5,
+      "battery_max_current": 80,
+      "battery_input": 3,
+      "battery_families": ["CQ6", "CQ16"],
+      "max_array_power": 150000,
+      "recommended_pv_power": 75000,
+      "max_pv_voltage": 1000,
+      "min_mppt_voltage": 180,
+      "max_mppt_voltage": 950,
+      "max_pv_current": 20,
+      "pv_isc": 22.5,
+      "mppts": 8,
+      "input_per_mppt": 2,
+      "fase": "trifasico"
+    },
+
+    {
+      "modelo": "H3-125-Plus",
+      "tipo": "inversor",
+      "max_power_eps": 137500,
+      "rated_voltage": "T380",
+      "peak_power_60s": 155000,
+      "picture": "assets/produtos/H3-Plus.png",
+      "efficiency": 98.5,
+      "battery_max_current": 80,
+      "battery_input": 3,
+      "battery_families": ["CQ6", "CQ16"],
+      "max_array_power": 250000,
+      "recommended_pv_power": 125000,
+      "max_pv_voltage": 1000,
+      "min_mppt_voltage": 180,
+      "max_mppt_voltage": 950,
+      "max_pv_current": 20,
+      "pv_isc": 22.5,
+      "mppts": 8,
+      "input_per_mppt": 2,
+      "fase": "trifasico"
+    }
+    
+   
+
+  ],
+
+
+  "baterias": [
+
+    {
+      "modelo": "EP5 (5.18 kWh)",
+      "tipo": "bateria",
+      "capacity_kwh": 5.18,
+      "nominal_power_kw": 5.18,
+      "peak_power_kw": 12.4838,
+      "dod": 90,
+      "round_trip_efficiency": 95,
+      "voltage": 192,
+      "nominal_current": 27,
+      "picture": "assets/produtos/EP5.png",
+      "recommended_charge_current": 13.5
+    },
+
+
+    {
+      "modelo": "EP11 (10.36 kWh)",
+      "tipo": "bateria",
+      "capacity_kwh": 10.36,
+      "nominal_power_kw": 10.36,
+      "peak_power_kw": 24.9676,
+      "dod": 90,
+      "round_trip_efficiency": 95,
+      "voltage": 384,
+      "nominal_current": 27,
+      "picture": "assets/produtos/EP11.png",
+      "recommended_charge_current": 13.5
+    },
+
+
+    {
+      "modelo": "EP6 (5.76 kWh)",
+      "tipo": "bateria",
+      "capacity_kwh": 5.76,
+      "nominal_power_kw": 5.76,
+      "peak_power_kw": 12.48,
+      "dod": 90,
+      "round_trip_efficiency": 95,
+      "voltage": 192,
+      "nominal_current": 30,
+      "picture": "assets/produtos/EP6.png",
+      "recommended_charge_current": 15
+    },
+
+
+    {
+      "modelo": "EP12 (11.52 kWh)",
+      "tipo": "bateria",
+      "capacity_kwh": 11.52,
+      "nominal_power_kw": 11.52,
+      "peak_power_kw": 24.96,
+      "dod": 90,
+      "round_trip_efficiency": 95,
+      "voltage": 384,
+      "nominal_current": 30,
+      "picture": "assets/produtos/EP12.png",
+      "recommended_charge_current": 15
+    },
+
+{
+  "modelo": "CQ16",
+  "tipo": "bateria",
+  "familia_bateria": "CQ16",
+  "modular": true,
+  "capacity_kwh": 16.07,
+  "nominal_power_kw": 16.07,
+  "dod": 90,
+  "round_trip_efficiency": 92,
+  "voltage": 51.2,
+  "nominal_current": 157,
+  "max_charge_discharge_current": 240,
+  "peak_discharge_current": 470,
+  "min_modules": 4,
+  "stack_thresholds": [15, 26, 45],
+  "max_stacks": 3,
+  "control_box_model": "CQBOX",
+  "requires_control_box": true,
+  "compatible_inverter_families": ["H3-Plus"],
+  "picture": "assets/produtos/cq16.png",
+  "datasheet": "https://br.fox-ess.com/download/upfiles/BR-CQ16-CQBOX-Datasheet-V1.1-20260131.pdf"
+}
+
+  ],
+
+
+
+  "all_in_one": [
+
+    {
+      "modelo": "P100-5-H",
+      "tipo": "all_in_one",
+      "max_power_eps": 5000,
+      "rated_voltage": "220",
+      "peak_power_60s": 6000,
+      "peak_power_30s": 7500,
+      "peak_power_10s": 10000,
+      "picture": "assets/produtos/P100.png",
+      "max_parallel_units": 3,
+      "parallel_accessory_model": "AI Link",
+      "efficiency": 97.2,
+      "max_array_power": 16000,
+      "recommended_pv_power": 15000,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 550,
+      "max_pv_current": 20,
+      "pv_isc": 25,
+      "mppts": 2,
+      "input_per_mppt": 1,
+      "nominal_power_kw": 10.24,
+      "dod": 95,
+      "round_trip_efficiency": 97,
+      "fase": "monofasico"
+    },
+
+    {
+      "modelo": "P100-7.5-H",
+      "tipo": "all_in_one",
+      "max_power_eps": 7500,
+      "rated_voltage": "220",
+      "peak_power_60s": 9000,
+      "peak_power_30s": 11250,
+      "peak_power_10s": 15000,
+      "picture": "assets/produtos/P100.png",
+      "max_parallel_units": 3,
+      "parallel_accessory_model": "AI Link",
+      "efficiency": 97.2,
+      "max_array_power": 20000,
+      "recommended_pv_power": 18000,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 550,
+      "max_pv_current": 20,
+      "pv_isc": 25,
+      "mppts": 3,
+      "input_per_mppt": 1,
+      "nominal_power_kw": 10.24,
+      "dod": 95,
+      "round_trip_efficiency": 97,
+      "fase": "monofasico"
+    },
+
+    {
+      "modelo": "P100-10-H",
+      "tipo": "all_in_one",
+      "max_power_eps": 10000,
+      "rated_voltage": "220",
+      "peak_power_60s": 12000,
+      "peak_power_30s": 15000,
+      "peak_power_10s": 20000,
+      "picture": "assets/produtos/P100.png",
+      "max_parallel_units": 3,
+      "parallel_accessory_model": "AI Link",
+      "efficiency": 97.2,
+      "max_array_power": 20000,
+      "recommended_pv_power": 20000,
+      "max_pv_voltage": 600,
+      "min_mppt_voltage": 80,
+      "max_mppt_voltage": 550,
+      "max_pv_current": 20,
+      "pv_isc": 25,
+      "mppts": 3,
+      "input_per_mppt": 1,
+      "nominal_power_kw": 10.24,
+      "dod": 95,
+      "round_trip_efficiency": 97,
+      "fase": "monofasico"
+    },
+
+    {
+      "modelo": "S28-M-H-220V",
+      "tipo": "all_in_one",
+      "max_power_eps": 2400,
+      "rated_voltage": "220",
+      "picture": "assets/produtos/S28-M-H.png",
+      "efficiency": 97,
+      "max_array_power": 4000,
+      "recommended_pv_power": 4000,
+      "max_pv_voltage": 60,
+      "min_mppt_voltage": 10,
+      "max_mppt_voltage": 60,
+      "max_pv_current": 30,
+      "pv_isc": 40,
+      "mppts": 4,
+      "input_per_mppt": 1,
+      "nominal_power_kw": 2.64,
+      "dod": 95,
+      "round_trip_efficiency": 97,
+      "fase": "monofasico"
+    },
+
+    {
+      "modelo": "S28-M-H-127V",
+      "tipo": "all_in_one",
+      "max_power_eps": 1300,
+      "rated_voltage": "127",
+      "picture": "assets/produtos/S28-M-H.png",
+      "efficiency": 97,
+      "max_array_power": 4000,
+      "recommended_pv_power": 4000,
+      "max_pv_voltage": 60,
+      "min_mppt_voltage": 10,
+      "max_mppt_voltage": 60,
+      "max_pv_current": 30,
+      "pv_isc": 40,
+      "mppts": 4,
+      "input_per_mppt": 1,
+      "nominal_power_kw": 2.64,
+      "dod": 95,
+      "round_trip_efficiency": 97,
+      "fase": "monofasico"
+    }
+
+
+  ],
+
+  "acessorios": [
+
+ {
+      "modelo": "Junction Box",
+      "tipo": "acessorios",
+      "battery_input": 4,
+      "picture": "assets/produtos/Junction-box.png"      
+    },
+
+  {
+    "modelo": "Fox Hub G2",
+    "tipo": "acessorios",
+    "picture": "assets/produtos/Fox-Hub-G2.png"
+  },
+
+  {
+    "modelo": "AI Link",
+    "tipo": "acessorios",
+    "picture": "assets/produtos/AI-Link.png"
+  }
+
+  ]
+
+
+}

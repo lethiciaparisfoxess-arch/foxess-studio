@@ -1,0 +1,471 @@
+/* =====================================================
+   FOXESS STUDIO
+   Componentes reutilizáveis
+===================================================== */
+
+
+/* =====================================================
+   CARD PRINCIPAL
+===================================================== */
+
+.card {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 38px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   BOTÃO VOLTAR
+===================================================== */
+
+.voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0 0 15px 0;
+
+    border: 1px solid #ddd6fe;
+    border-radius: 12px;
+
+    background: #f5f3ff;
+
+    color: #7c3aed;
+
+    font-size: 25px;
+    line-height: 1;
+}
+
+.voltar:hover {
+    background: #ede9fe;
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   AVISO
+===================================================== */
+
+.aviso {
+    margin-top: 25px;
+    padding: 16px;
+
+    background: #f5f3ff;
+
+    border-left: 4px solid #7c3aed;
+    border-radius: 12px;
+
+    text-align: justify;
+}
+
+.aviso p {
+    margin: 0;
+
+    color: #5b556b;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   OPÇÕES DE APLICAÇÃO
+===================================================== */
+
+.selecoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.selecoes-linha {
+    flex-direction: row;
+
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.opcao-card {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 19px;
+    margin: 0;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    cursor: pointer;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    text-align: left;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.opcao-card:hover {
+    border-color: #c4b5fd;
+
+    transform: translateY(-1px);
+}
+
+.opcao-card input {
+    display: none;
+}
+
+.opcao-card:has(input:checked) {
+    border-color: #7c3aed;
+
+    background: #f5f3ff;
+
+    color: #7c3aed;
+}
+
+.opcao-card-pequena {
+    flex: 1;
+
+    justify-content: center;
+
+    padding: 14px;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   PRODUTOS
+===================================================== */
+
+.produto-box {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 18px;
+
+    padding: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #ede9fe;
+    border-radius: 15px;
+}
+
+.produto-box img {
+    width: 120px;
+    height: 120px;
+
+    padding: 8px;
+
+    object-fit: contain;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    flex-shrink: 0;
+}
+
+.produto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+
+    gap: 6px;
+
+    text-align: left;
+}
+
+.produto-info strong {
+    color: #111827;
+
+    font-size: 17px;
+}
+
+.produto-info p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.produto-sem-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 120px;
+
+    padding: 10px;
+
+    background: #f9fafb;
+
+    border: 1px dashed #d1d5db;
+    border-radius: 14px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   PAINEL DE RESULTADO
+===================================================== */
+
+.resultado-estado,
+.resultado-erro {
+    padding: 18px;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.resultado-estado {
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.resultado-erro {
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+}
+
+.resultado-erro strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #b91c1c;
+
+    font-size: 14px;
+}
+
+.resultado-erro p {
+    margin: 0;
+
+    color: #991b1b;
+}
+
+.resultado-resumo {
+    padding: 14px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 14px;
+}
+
+.resultado-resumo p {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin: 6px 0;
+
+    font-size: 13px;
+}
+
+.resultado-resumo strong {
+    color: #111827;
+
+    text-align: right;
+}
+
+.resultado-bloco {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.resultado-bloco h3 {
+    margin-bottom: 4px;
+}
+
+.resultado-aviso-pico {
+    padding: 13px 15px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+    border-left: 4px solid #f97316;
+    border-radius: 12px;
+}
+
+.resultado-aviso-pico p {
+    margin: 0;
+
+    color: #c2410c;
+
+    font-size: 13px;
+}
+
+.resultado-resumo-energia {
+    padding: 14px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+}
+
+.resultado-resumo-energia p {
+    margin: 6px 0;
+
+    font-size: 13px;
+}
+
+.resultado-resumo-energia strong {
+    color: #111827;
+}
+
+
+/* =====================================================
+   BOTÃO EXCLUIR
+===================================================== */
+
+.btn-excluir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    margin: 0 auto;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+}
+
+.btn-excluir:hover {
+    background: #fecaca;
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .card {
+        max-width: none;
+
+        padding: 25px;
+    }
+
+    .selecoes-linha {
+        flex-direction: column;
+    }
+
+    .produto-box {
+        align-items: flex-start;
+    }
+
+    .produto-box img,
+    .produto-sem-imagem {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .produto-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto-info {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .produto-box img,
+    .produto-sem-imagem {
+        width: 140px;
+        height: 140px;
+    }
+
+    .resultado-resumo p {
+        flex-direction: column;
+
+        gap: 1px;
+
+        text-align: left;
+    }
+
+    .resultado-resumo strong {
+        text-align: left;
+    }
+
+}
+
+/* =====================================================
+   LISTA DE ACESSÓRIOS
+===================================================== */
+
+.lista-acessorios {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.resultado-acessorios {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
