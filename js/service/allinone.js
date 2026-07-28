@@ -44,16 +44,28 @@ export function selecionarAllInOne(parametros) {
 
     validarParametrosSelecao(parametros);
 
-
     const {
-    equipamentos,
-    padraoEntrada,
-    possuiCargaTrifasica = false,
-    tensoesCargas,
-    potenciaTotalW,
-    potenciaPicoW,
-    autonomiaH
-} = parametros;
+        equipamentos,
+        padraoEntrada,
+        possuiCargaTrifasica = false,
+        tensoesCargas,
+        potenciaTotalW,
+        potenciaPicoW,
+        autonomiaH
+    } = parametros;
+
+    console.log("========== AIO ==========");
+    console.log("Padrão:", padraoEntrada);
+    console.log("Possui carga trifásica:", possuiCargaTrifasica);
+    console.log("Tensões:", tensoesCargas);
+
+    console.log(
+        equipamentos.map(e => ({
+            modelo: e.modelo,
+            rated_voltage: e.rated_voltage,
+            fase: e.fase
+        }))
+    );
 
 
 const validacaoTensoes =
@@ -333,6 +345,7 @@ if (equipamentosCompativeis.length === 0) {
 const quantidadeFinal =
     Math.max(
         quantidadePorPotencia,
+        quantidadePorEnergia,
         1
     );
 
@@ -710,18 +723,24 @@ const tagsCompativeis =
         possuiCargaTrifasica
     );
 
+console.log("Tags:", tagsCompativeis);
 
-    return equipamentos.filter(
-        equipamento => {
+return equipamentos.filter(equipamento => {
 
-            return tagsCompativeis.includes(
-                String(
-                    equipamento.rated_voltage
-                ).trim()
-            );
+    const tensao = String(equipamento.rated_voltage).trim();
 
-        }
-    );
+    // Regra para G-MAX
+    if (
+        equipamento.fase === "trifasico" &&
+        padraoEntrada.includes("220") &&
+        padraoEntrada.includes("380")
+    ) {
+        return true;
+    }
+
+    return tagsCompativeis.includes(tensao);
+
+});
 
 }
 
@@ -808,15 +827,24 @@ export function obterTagsAllInOneCompativeis(
 // Se houver cargas em mais de uma tensão
 if (tensoes.length > 1) {
 
-    // Havendo carga trifásica, somente AIO trifásico poderá atender
+    // G-MAX trifásico
+    if (
+        possuiCargaTrifasica &&
+        texto.includes("trifasico") &&
+        texto.includes("380")
+    ) {
+
+        return ["T380"];
+
+    }
+
+    // Demais All in One
     if (possuiCargaTrifasica) {
 
         return [];
 
     }
 
-    // Não há carga trifásica:
-    // permite os AIO compatíveis com as tensões disponíveis.
     return tensoesDisponiveis;
 
 }

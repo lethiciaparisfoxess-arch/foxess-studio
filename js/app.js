@@ -12,7 +12,7 @@ import {
     carregarDatabase
 } from "./database.js";
 
-
+import { gerarPDF } from "./ui/pdf.js";
 // =====================================================
 // NAVEGAÇÃO
 // =====================================================

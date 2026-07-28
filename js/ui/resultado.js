@@ -13,6 +13,7 @@ import {
     escaparHTML
 } from "../utils/formatacao.js";
 
+import { gerarPDF } from "./pdf.js";
 
 // =====================================================
 // CONFIGURAÇÕES
@@ -91,24 +92,76 @@ export function exibirResultadoDimensionamento(
     }
 
 
-    if (resultado.tipoSolucao === "aio") {
-
-        container.innerHTML =
-            criarHTMLResultadoAllInOne(
-                resultado
-            );
-
-        return;
-
-    }
-
+if (resultado.tipoSolucao === "aio") {
 
     container.innerHTML =
-        criarHTMLResultadoInversorBateria(
-            resultado
-        );
+        criarHTMLResultadoAllInOne(resultado);
+
+    document
+        .getElementById("btnBaixarPDF")
+        ?.addEventListener("click", () => {
+
+            const avisoPico =
+    formatarAvisoPico(
+        resultado.inversor?.pico,
+        resultado.potenciaPicoW,
+        "O inversor selecionado",
+        "Os inversores selecionados",
+        resultado.inversor?.quantidade
+    );
+
+resultado.pdf = {
+
+    avisoPico,
+
+    acessorios:
+        resultado.tipoSolucao === "aio"
+            ? (resultado.acessorios || [])
+            : montarListaAcessoriosInversorBateria(resultado)
+
+};
+
+gerarPDF(resultado);
+
+        });
+
+    return;
 
 }
+
+container.innerHTML =
+    criarHTMLResultadoInversorBateria(resultado);
+
+document
+    .getElementById("btnBaixarPDF")
+    ?.addEventListener("click", () => {
+
+        const avisoPico =
+    formatarAvisoPico(
+        resultado.inversor?.pico,
+        resultado.potenciaPicoW,
+        "O inversor selecionado",
+        "Os inversores selecionados",
+        resultado.inversor?.quantidade
+    );
+
+resultado.pdf = {
+
+    avisoPico,
+
+    acessorios:
+        resultado.tipoSolucao === "aio"
+            ? (resultado.acessorios || [])
+            : montarListaAcessoriosInversorBateria(resultado)
+
+};
+
+gerarPDF(resultado);
+
+    });
+
+}
+
 
 
 // =====================================================
@@ -441,8 +494,20 @@ ${
 
         </section>
 
-
         ${htmlAcessorios}
+
+        <hr>
+
+        <div class="resultado-acoes">
+
+            <button
+                id="btnBaixarPDF"
+                class="btn-pdf"
+            >
+                📄 Baixar Relatório PDF
+            </button>
+
+        </div>
 
     `;
 
@@ -819,7 +884,20 @@ function criarHTMLResultadoAllInOne(
         </section>
 
 
-        ${htmlAcessorios}
+                ${htmlAcessorios}
+
+        <hr>
+
+        <div class="resultado-acoes">
+
+            <button
+                id="btnBaixarPDF"
+                class="btn-pdf"
+            >
+                📄 Baixar Relatório PDF
+            </button>
+
+        </div>
 
     `;
 

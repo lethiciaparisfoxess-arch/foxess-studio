@@ -538,6 +538,28 @@
       "dod": 95,
       "round_trip_efficiency": 97,
       "fase": "monofasico"
+    },
+
+    {
+      "modelo": "G-MAX PLUS",
+      "tipo": "all_in_one",
+      "max_power_eps": 130000,
+      "rated_voltage": "380",
+      "picture": "assets/produtos/bess.png",
+      "efficiency": 98,
+      "max_array_power": 250000,
+      "recommended_pv_power": 250000,
+      "max_pv_voltage": 950,
+      "min_mppt_voltage": 180,
+      "max_mppt_voltage": 850,
+      "max_pv_current": 40,
+      "pv_isc": 50,
+      "mppts": 8,
+      "input_per_mppt": 2,
+      "nominal_power_kw": 241,
+      "dod": 100,
+      "round_trip_efficiency": 89,
+      "fase": "trifasico"
     }
 
 
