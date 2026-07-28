@@ -12,6 +12,9 @@ exports.handler = async (event) => {
 
         const dados = JSON.parse(event.body);
 
+    const dataAtual = new Date().toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo"});
+
         const {
             nome,
             empresa,
@@ -38,7 +41,7 @@ exports.handler = async (event) => {
                 process.env.GOOGLE_SHEET_ID,
 
             range:
-                "Página1!A:E",
+                "Página1!A:F",
 
             valueInputOption:
                 "USER_ENTERED",
@@ -47,6 +50,7 @@ exports.handler = async (event) => {
 
                 values: [[
 
+                    dataAtual,
                     nome,
                     empresa,
                     email,
